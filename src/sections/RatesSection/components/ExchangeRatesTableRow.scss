@@ -1,0 +1,82 @@
+@use "../../../utils/themeConstants";
+
+.instrument-row {
+  font-size: 14px;
+  vertical-align: top;
+
+  @supports (-moz-appearance: none) {
+    // workaround for a small graphical bug in library
+    transform: translate3d(0px, 0.2px, 0px);
+  }
+
+  &__data-separator {
+    padding: 0px !important;
+    border-top: 1px dashed themeConstants.$color-dark;
+
+    // mobile specific border style, because chrome renders 1px dashed border as solid on mobile
+    @media(max-width: themeConstants.$mobile-cutoff-width) {
+      border-top: 1px dotted rgba(themeConstants.$color-dark, 0.5);
+    }
+  }
+
+  &--first {
+    td {
+      border-top: none;
+    }
+  }
+
+  &__instrument-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  
+    &--reverse {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+  
+    &__text {
+
+      &__symbol {
+        width: 20px;
+        margin-left: 0px;
+        margin-right: 4px;
+
+        text-align: center;
+
+        $flag-outline-color: themeConstants.$color-dark-highlight;
+        text-shadow: 
+        -0.5px -0.5px 0 $flag-outline-color,
+         0.5px -0.5px 0 $flag-outline-color,
+        -0.5px  0.5px 0 $flag-outline-color,
+         0.5px  0.5px 0 $flag-outline-color;
+      }
+    }
+  }
+
+  &__instrument-spinner {
+    height: 32px;
+  }
+
+  &__instrument-rate {
+    text-align: right;
+    gap: 4px;
+
+    &__currency-symbol {
+      width: 28px;
+      line-height: 16px;
+      overflow: hidden;
+    }
+  }
+  
+  &__instrument-rate-changes {
+    text-align: right;
+  }
+
+  @media(max-width: themeConstants.$mobile-cutoff-width) {
+    font-size: 14px !important;
+    height: 36px;
+    vertical-align: middle;
+  }
+}

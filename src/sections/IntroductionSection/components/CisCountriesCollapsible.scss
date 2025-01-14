@@ -1,0 +1,91 @@
+@use '../../../utils/themeConstants';
+
+.cis-countries-collapsible {
+  width: 100%;
+  min-width: 100%;
+}
+
+.cis-countries-collapsible__item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: themeConstants.$color-light;
+  border-radius: 10px;
+  gap: 20px;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: bold;
+    gap: 5px;
+    align-items: flex-start;
+  
+    &__note {
+      font-size: 12px;
+      line-height: 12px;
+      font-weight: normal;
+    }
+
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+      min-width: 30px;
+      min-height: 30px;
+      border-radius: 100px;
+      background-color: themeConstants.$color-bright;
+    
+      transition: transform 0.5s ease-in-out;
+      transform-origin: center;
+      transform: rotate(45deg) translateZ(0);
+      will-change: transform;
+      overflow: hidden;
+    
+      @media (hover: hover) {
+        &:hover {
+          outline: 2px solid themeConstants.$color-dark;
+        }
+      }
+    
+      &__symbol {
+        display: inline-block;
+        color: themeConstants.$color-dark;
+        font-family: Twemoji Country Flags, Segoe UI Symbol, Consolas;
+        font-size: 18px;
+        line-height: 18px;
+        transform: translateZ(0);
+        will-change: transform;
+      }
+    }
+  }
+}
+
+.country-list-table {
+  margin-top: 10px;
+  background-color: themeConstants.$color-light1;
+  border-radius: 10px;
+
+  tr > td {
+    border-top: 1px dotted themeConstants.$color-dark;
+    border-top: 1px dashed themeConstants.$color-dark;
+  }
+  tr:first-child > td {
+    border: 0;
+  }
+
+  td {
+    padding: 5px 10px;
+  }
+
+  @media (max-width: 720px) {
+    width: 100%;
+    font-size: 14px;
+
+    td {
+      padding: 2px;
+    }
+  }
+}

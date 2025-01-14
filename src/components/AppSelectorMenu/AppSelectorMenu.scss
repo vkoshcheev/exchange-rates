@@ -1,0 +1,52 @@
+@use "../../utils/themeConstants";
+
+.app-selector-menu {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.app-selector-menu__button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+
+  background: themeConstants.$color-bright;
+  outline: 1px solid themeConstants.$color-bright;
+
+  &:hover {
+    background: themeConstants.$color-brightest;
+    outline: 1px solid themeConstants.$color-dark;
+  }
+}
+
+$searchFieldHeight: 54px;
+.app-selector-menu__button__content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  justify-self: stretch;
+
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 10px;
+  border-right: 0px;
+
+  &__selected-item-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+  
+    color: themeConstants.$color-dark;
+    font-size: 14px;
+  }
+}
+

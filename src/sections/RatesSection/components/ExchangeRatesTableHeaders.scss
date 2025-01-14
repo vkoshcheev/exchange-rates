@@ -1,0 +1,24 @@
+@use "../../../utils/themeConstants";
+
+.exchange-rates-table__header {
+  text-align: left;
+  font-weight: bold;
+  border-right: 1px dashed themeConstants.$color-dark !important;
+
+  &__rates {
+    text-align: center;
+    font-weight: bold;
+    border-right: 1px dashed themeConstants.$color-dark;
+
+    @media(max-width: themeConstants.$mobile-cutoff-width) {
+      border-right: none;
+    }
+  }
+  
+  &__percentage-changes-over-periods {
+    text-align: center;
+    font-weight: bold;
+    background-color: themeConstants.$color-light;
+    border-bottom: 1px dashed themeConstants.$color-dark;
+  }
+}

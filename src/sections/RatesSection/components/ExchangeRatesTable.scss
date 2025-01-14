@@ -1,0 +1,96 @@
+@use "../../../utils/themeConstants";
+
+$paddings-desktop: 4px;
+$paddings-mobile: 2px;
+
+$border-radius-desktop: 10px;
+$border-radius-mobile: 8px;
+
+.exchange-rates-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: $border-radius-desktop;
+  border: 1px solid themeConstants.$color-dark;
+
+  $main-content-background-color: themeConstants.$color-light1;
+  background-color: $main-content-background-color;
+  font-size: 14px;
+  
+  &__colgroup-item {
+    &:nth-child(1) { width: 195px; }
+    &:nth-child(2) { width: 100px; }
+    &:nth-child(3) { width: 45px; }
+    &:nth-child(4) { width: auto; }
+    &:nth-child(5) { width: auto; }
+
+    @media(max-width: themeConstants.$mobile-cutoff-width) {
+      &:nth-child(1) { width: auto; }
+      &:nth-child(2) { width: 100px; }
+      &:nth-child(3) { width: 45px; }
+      &:nth-child(4) { width: 0; }
+      &:nth-child(5) { width: 0; }
+    }
+  }
+
+  &__separator {
+    padding: 0px !important;
+    height: 0px !important;
+    border-top: 1px solid themeConstants.$color-dark;
+  }
+
+  tbody {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  th {
+    background-color: themeConstants.$color-bright;
+    padding: $paddings-desktop;
+
+    &:first-child { border-top-left-radius: $border-radius-desktop; }
+    &:nth-child(3) { border-top-right-radius: $border-radius-desktop; }
+  }
+
+  td {
+    border-radius: 0px;
+    padding: $paddings-desktop;
+    background-color: rgba($main-content-background-color, 0.75);
+
+    &:first-child {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    &:last-child {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+
+  @media(max-width: themeConstants.$mobile-cutoff-width) {
+    font-size: 14px;
+    border-radius: $border-radius-mobile;
+    border: 1px solid themeConstants.$color-dark;
+
+    th {
+      padding: $paddings-mobile;
+      height: 30px;
+
+      
+      &:first-child { border-top-left-radius: $border-radius-mobile; padding-left: 4px; }
+      &:nth-child(2) { border-top-right-radius: $border-radius-mobile; }
+    }
+  
+    td {
+      padding: $paddings-mobile;
+
+      &:first-child {
+        padding-left: 4px;
+      }
+      &:nth-child(3) {
+        border-top-right-radius: $border-radius-mobile;
+        border-bottom-right-radius: $border-radius-mobile;
+      }
+    }
+  }
+}

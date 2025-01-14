@@ -1,0 +1,59 @@
+@use "./utils/themeConstants";
+
+.main-container {
+  gap: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 10px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: calc(100% - 20px);
+  max-width: 720px;
+
+  padding: 10px;
+  gap: 10px;
+
+  background: themeConstants.$color-light;
+  border-radius: 16px;
+
+  &-row {
+    flex-direction: row;
+  }
+}
+
+.section__title {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.country-flag {
+  font-family: 'Twemoji Country Flags', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+  $flag-outline-color: themeConstants.$color-dark-highlight;
+  text-shadow: 
+  -0.5px -0.5px 0 $flag-outline-color,
+   0.5px -0.5px 0 $flag-outline-color,
+  -0.5px  0.5px 0 $flag-outline-color,
+   0.5px  0.5px 0 $flag-outline-color;
+}
+
+.hide-below-720 {
+  @media(max-width: 720px) {
+    display: none !important;
+  }
+}
+
+.show-below-720 {
+  display: none;
+  @media(max-width: 720px) {
+    display: initial;
+  }
+}
