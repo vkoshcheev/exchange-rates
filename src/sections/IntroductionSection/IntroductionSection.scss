@@ -1,1 +1,16 @@
 @use "../../utils/themeConstants";
+
+.source-code {
+  font-size: 12px;
+  font-weight: bold;
+
+  > a {
+    color: themeConstants.$color-dark;
+    font-weight: normal;
+    @media (hover: hover) {
+      &:hover {
+        color: rgba(themeConstants.$color-dark, 0.7);
+      }
+    }
+  }
+}
