@@ -34,7 +34,7 @@ const CisCountriesCollapsible = () => {
           <div>
             <div>Страны СНГ и их валюты</div>
             <div className="cis-countries-collapsible__item__header__note">
-              (нажмите на "+", чтобы просмотреть таблицу)
+              (нажмите на "+", чтобы открыть таблицу)
             </div>
           </div>
         </div>
