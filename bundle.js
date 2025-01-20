@@ -5827,6 +5827,10 @@ p {
   margin: 0;
 }
 
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 button {
   cursor: pointer;
   text-decoration: none;
@@ -5838,7 +5842,7 @@ button {
   border: 0;
   -webkit-tap-highlight-color: transparent;
   font-family: unset !important;
-}`, "",{"version":3,"sources":["webpack://./src/index.scss","webpack://./src/utils/_themeConstants.scss"],"names":[],"mappings":"AAEA;EACE,aAAA;EACA,sBAAA;EAEA,SAAA;EACA,UAAA;EAEA,qBAAA;EACA,+LAAA;EAGA,mCAAA;EACA,kCAAA;EAEA,yBCRa;EDSb,cCjBW;ADWb;;AASA;EACE,SAAA;AANF;;AASA;EACE,eAAA;EACA,qBAAA;EACA,gBAAA;EACA,YAAA;EACA,iBAAA;EACA,UAAA;EACA,SAAA;EACA,SAAA;EACA,wCAAA;EACA,6BAAA;AANF","sourcesContent":["@use \"./utils/themeConstants\";\r\n\r\nbody {\r\n  display: flex;\r\n  flex-direction: column;\r\n\r\n  margin: 0;\r\n  padding: 0;\r\n\r\n  white-space: pre-line;\r\n  font-family: Twemoji Country Flags, Consolas, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\r\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\r\n    sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n\r\n  background-color: themeConstants.$color-bright;\r\n  color: themeConstants.$color-dark;\r\n}\r\n\r\np {\r\n  margin: 0;\r\n}\r\n\r\nbutton {\r\n  cursor: pointer;\r\n  text-decoration: none;\r\n  background: none;\r\n  border: none;\r\n  user-select: none;\r\n  padding: 0;\r\n  margin: 0;\r\n  border: 0;\r\n  -webkit-tap-highlight-color: transparent;\r\n  font-family: unset !important;\r\n}","$color-dark: #213555;\r\n$color-dark-highlight: #3E5879;\r\n\r\n$color-medium: #D8C4B6;\r\n\r\n$color-light: #ebd9cd;\r\n$color-light1: #f1e2d7;\r\n\r\n$color-bright: #F5EFE7;\r\n$color-brightest: #fff9f2;\r\n\r\n$mobile-cutoff-width: 720px;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/index.scss","webpack://./src/utils/_themeConstants.scss"],"names":[],"mappings":"AAEA;EACE,aAAA;EACA,sBAAA;EAEA,SAAA;EACA,UAAA;EAEA,qBAAA;EACA,+LAAA;EAGA,mCAAA;EACA,kCAAA;EAEA,yBCRa;EDSb,cCjBW;ADWb;;AASA;EACE,SAAA;AANF;;AASA;EACE,wCAAA;AANF;;AASA;EACE,eAAA;EACA,qBAAA;EACA,gBAAA;EACA,YAAA;EACA,iBAAA;EACA,UAAA;EACA,SAAA;EACA,SAAA;EACA,wCAAA;EACA,6BAAA;AANF","sourcesContent":["@use \"./utils/themeConstants\";\r\n\r\nbody {\r\n  display: flex;\r\n  flex-direction: column;\r\n\r\n  margin: 0;\r\n  padding: 0;\r\n\r\n  white-space: pre-line;\r\n  font-family: Twemoji Country Flags, Consolas, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\r\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\r\n    sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n\r\n  background-color: themeConstants.$color-bright;\r\n  color: themeConstants.$color-dark;\r\n}\r\n\r\np {\r\n  margin: 0;\r\n}\r\n\r\na {\r\n  -webkit-tap-highlight-color: transparent;\r\n}\r\n\r\nbutton {\r\n  cursor: pointer;\r\n  text-decoration: none;\r\n  background: none;\r\n  border: none;\r\n  user-select: none;\r\n  padding: 0;\r\n  margin: 0;\r\n  border: 0;\r\n  -webkit-tap-highlight-color: transparent;\r\n  font-family: unset !important;\r\n}","$color-dark: #213555;\r\n$color-dark-highlight: #3E5879;\r\n\r\n$color-medium: #D8C4B6;\r\n\r\n$color-light: #ebd9cd;\r\n$color-light1: #f1e2d7;\r\n\r\n$color-bright: #F5EFE7;\r\n$color-brightest: #fff9f2;\r\n\r\n$mobile-cutoff-width: 720px;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5865,7 +5869,19 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.source-code {
+  font-size: 12px;
+  font-weight: bold;
+}
+.source-code > a {
+  color: #213555;
+  font-weight: normal;
+}
+@media (hover: hover) {
+  .source-code > a:hover {
+    color: rgba(33, 53, 85, 0.7);
+  }
+}`, "",{"version":3,"sources":["webpack://./src/sections/IntroductionSection/IntroductionSection.scss","webpack://./src/utils/_themeConstants.scss"],"names":[],"mappings":"AAEA;EACE,eAAA;EACA,iBAAA;AADF;AAGE;EACE,cCPS;EDQT,mBAAA;AADJ;AAEI;EACE;IACE,4BAAA;EAAN;AACF","sourcesContent":["@use \"../../utils/themeConstants\";\r\n\r\n.source-code {\r\n  font-size: 12px;\r\n  font-weight: bold;\r\n\r\n  > a {\r\n    color: themeConstants.$color-dark;\r\n    font-weight: normal;\r\n    @media (hover: hover) {\r\n      &:hover {\r\n        color: rgba(themeConstants.$color-dark, 0.7);\r\n      }\r\n    }\r\n  }\r\n}","$color-dark: #213555;\r\n$color-dark-highlight: #3E5879;\r\n\r\n$color-medium: #D8C4B6;\r\n\r\n$color-light: #ebd9cd;\r\n$color-light1: #f1e2d7;\r\n\r\n$color-bright: #F5EFE7;\r\n$color-brightest: #fff9f2;\r\n\r\n$mobile-cutoff-width: 720px;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -59873,7 +59889,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const IntroductionSection = () => {
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "section", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { className: "section__title", children: "\u0414\u0430\u043D\u043D\u044B\u0439 \u0441\u0430\u0439\u0442 \u043F\u043E\u0441\u0432\u044F\u0449\u0451\u043D \u043E\u0431\u043C\u0435\u043D\u043D\u044B\u043C \u043A\u0443\u0440\u0441\u0430\u043C \u0432\u0430\u043B\u044E\u0442 \u0441\u0442\u0440\u0430\u043D \u0421\u041D\u0413." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: "\u0421\u043E\u0434\u0440\u0443\u0436\u0435\u0441\u0442\u0432\u043E \u041D\u0435\u0437\u0430\u0432\u0438\u0441\u0438\u043C\u044B\u0445 \u0413\u043E\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432 (\u0421\u041D\u0413) \u2014 \u043C\u0435\u0436\u0434\u0443\u043D\u0430\u0440\u043E\u0434\u043D\u0430\u044F \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F, \u043F\u0440\u0438\u0437\u0432\u0430\u043D\u043D\u0430\u044F \u0440\u0435\u0433\u0443\u043B\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u043E\u0442\u043D\u043E\u0448\u0435\u043D\u0438\u044F \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u043C\u0435\u0436\u0434\u0443 \u043D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u043C\u0438 \u0433\u043E\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0430\u043C\u0438, \u0432\u0445\u043E\u0434\u0438\u0432\u0448\u0438\u043C\u0438 \u0440\u0430\u043D\u0435\u0435 \u0432 \u0441\u043E\u0441\u0442\u0430\u0432 \u0421\u0421\u0421\u0420. \u041E\u0441\u043D\u043E\u0432\u0430\u043D\u043E 8 \u0434\u0435\u043A\u0430\u0431\u0440\u044F 1991 \u0433\u043E\u0434\u0430." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_CisCountriesCollapsible__WEBPACK_IMPORTED_MODULE_2__["default"], {})] }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "section", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { className: "section__title", children: "\u0414\u0430\u043D\u043D\u044B\u0439 \u0441\u0430\u0439\u0442 \u043F\u043E\u0441\u0432\u044F\u0449\u0451\u043D \u043E\u0431\u043C\u0435\u043D\u043D\u044B\u043C \u043A\u0443\u0440\u0441\u0430\u043C \u0432\u0430\u043B\u044E\u0442 \u0441\u0442\u0440\u0430\u043D \u0421\u041D\u0413." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "source-code", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "hide-below-720", children: "\u0418\u0441\u0445\u043E\u0434\u043D\u044B\u0439 \u043A\u043E\u0434:\u00A0" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", { href: "https://github.com/vkoshcheev/exchange-rates", target: "_blank", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "hide-below-720", children: "https://github.com/vkoshcheev/exchange-rates" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "show-below-720", children: "\u0418\u0441\u0445\u043E\u0434\u043D\u044B\u0439 \u043A\u043E\u0434" })] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: "\u0421\u043E\u0434\u0440\u0443\u0436\u0435\u0441\u0442\u0432\u043E \u041D\u0435\u0437\u0430\u0432\u0438\u0441\u0438\u043C\u044B\u0445 \u0413\u043E\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432 (\u0421\u041D\u0413) \u2014 \u043C\u0435\u0436\u0434\u0443\u043D\u0430\u0440\u043E\u0434\u043D\u0430\u044F \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F, \u043F\u0440\u0438\u0437\u0432\u0430\u043D\u043D\u0430\u044F \u0440\u0435\u0433\u0443\u043B\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u043E\u0442\u043D\u043E\u0448\u0435\u043D\u0438\u044F \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u043C\u0435\u0436\u0434\u0443 \u043D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u043C\u0438 \u0433\u043E\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0430\u043C\u0438, \u0432\u0445\u043E\u0434\u0438\u0432\u0448\u0438\u043C\u0438 \u0440\u0430\u043D\u0435\u0435 \u0432 \u0441\u043E\u0441\u0442\u0430\u0432 \u0421\u0421\u0421\u0420. \u041E\u0441\u043D\u043E\u0432\u0430\u043D\u043E 8 \u0434\u0435\u043A\u0430\u0431\u0440\u044F 1991 \u0433\u043E\u0434\u0430." }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_CisCountriesCollapsible__WEBPACK_IMPORTED_MODULE_2__["default"], {})] }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IntroductionSection);
 
@@ -59917,7 +59933,7 @@ const CisCountriesCollapsible = () => {
     }, [isOpen]);
     // ✖ × ✕
     const CollapsibleHeader = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(() => {
-        return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "cis-countries-collapsible__item__header", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { ref: rotatingDivRef, className: "cis-countries-collapsible__item__header__button", onClick: () => setIsOpen((prev) => !prev), children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "cis-countries-collapsible__item__header__button__symbol", children: "\u2716" }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: "\u0421\u0442\u0440\u0430\u043D\u044B \u0421\u041D\u0413 \u0438 \u0438\u0445 \u0432\u0430\u043B\u044E\u0442\u044B" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "cis-countries-collapsible__item__header__note", children: "(\u043D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \"+\", \u0447\u0442\u043E\u0431\u044B \u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C \u0442\u0430\u0431\u043B\u0438\u0446\u0443)" })] })] }));
+        return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "cis-countries-collapsible__item__header", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { ref: rotatingDivRef, className: "cis-countries-collapsible__item__header__button", onClick: () => setIsOpen((prev) => !prev), children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "cis-countries-collapsible__item__header__button__symbol", children: "\u2716" }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: "\u0421\u0442\u0440\u0430\u043D\u044B \u0421\u041D\u0413 \u0438 \u0438\u0445 \u0432\u0430\u043B\u044E\u0442\u044B" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "cis-countries-collapsible__item__header__note", children: "(\u043D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \"+\", \u0447\u0442\u043E\u0431\u044B \u043E\u0442\u043A\u0440\u044B\u0442\u044C \u0442\u0430\u0431\u043B\u0438\u0446\u0443)" })] })] }));
     }, []);
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "cis-countries-collapsible__item", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react_collapsible__WEBPACK_IMPORTED_MODULE_2___default()), { trigger: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CollapsibleHeader, {}), handleTriggerClick: () => { }, open: isOpen, className: "cis-countries-collapsible", openedClassName: "cis-countries-collapsible", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("table", { className: "country-list-table", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("tbody", { children: cisCurrenciesDataArray.map((cisCurrencyData) => {
                         const countryFlag = cisCurrencyData.symbol;
@@ -59994,24 +60010,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _tanstack_react_query__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @tanstack/react-query */ "./node_modules/@tanstack/react-query/build/modern/useQuery.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _components_AppSelectorMenu_AppSelectorMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/AppSelectorMenu/AppSelectorMenu */ "./src/components/AppSelectorMenu/AppSelectorMenu.tsx");
 /* harmony import */ var _components_AppSpinner_AppSpinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/AppSpinner/AppSpinner */ "./src/components/AppSpinner/AppSpinner.tsx");
 /* harmony import */ var _components_AppSwitchButton_AppSwitchButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/AppSwitchButton/AppSwitchButton */ "./src/components/AppSwitchButton/AppSwitchButton.tsx");
-/* harmony import */ var _redux_mainReducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/mainReducer */ "./src/redux/mainReducer.ts");
-/* harmony import */ var _redux_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../redux/store */ "./src/redux/store.ts");
-/* harmony import */ var _utils_addFlagsFormatting__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utils/addFlagsFormatting */ "./src/utils/addFlagsFormatting.tsx");
-/* harmony import */ var _utils_hooks_useLocalStorage__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../utils/hooks/useLocalStorage */ "./src/utils/hooks/useLocalStorage.ts");
-/* harmony import */ var _utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../utils/localStorageKeys */ "./src/utils/localStorageKeys.ts");
-/* harmony import */ var _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../utils/requests/currenciesList */ "./src/utils/requests/currenciesList.ts");
+/* harmony import */ var _utils_addFlagsFormatting__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/addFlagsFormatting */ "./src/utils/addFlagsFormatting.tsx");
+/* harmony import */ var _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utils/requests/currenciesList */ "./src/utils/requests/currenciesList.ts");
+/* harmony import */ var _RatesSection_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./RatesSection.scss */ "./src/sections/RatesSection/RatesSection.scss");
+/* harmony import */ var _components_ExchangeRatesTable__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/ExchangeRatesTable */ "./src/sections/RatesSection/components/ExchangeRatesTable.tsx");
+/* harmony import */ var _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./fetchAndBuildCurrencyExchangeRatesData */ "./src/sections/RatesSection/fetchAndBuildCurrencyExchangeRatesData.ts");
+/* harmony import */ var _getExampleText__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./getExampleText */ "./src/sections/RatesSection/getExampleText.ts");
+/* harmony import */ var _tanstack_react_query__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @tanstack/react-query */ "./node_modules/@tanstack/react-query/build/modern/useQuery.js");
 /* harmony import */ var _utils_requests_currencyApiRequest__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../utils/requests/currencyApiRequest */ "./src/utils/requests/currencyApiRequest.ts");
-/* harmony import */ var _RatesSection_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./RatesSection.scss */ "./src/sections/RatesSection/RatesSection.scss");
-/* harmony import */ var _components_ExchangeRatesTable__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/ExchangeRatesTable */ "./src/sections/RatesSection/components/ExchangeRatesTable.tsx");
-/* harmony import */ var _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./fetchAndBuildCurrencyExchangeRatesData */ "./src/sections/RatesSection/fetchAndBuildCurrencyExchangeRatesData.ts");
-/* harmony import */ var _getExampleText__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./getExampleText */ "./src/sections/RatesSection/getExampleText.ts");
+/* harmony import */ var _utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../utils/localStorageKeys */ "./src/utils/localStorageKeys.ts");
+/* harmony import */ var _utils_hooks_useLocalStorage__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../utils/hooks/useLocalStorage */ "./src/utils/hooks/useLocalStorage.ts");
+/* harmony import */ var _redux_store__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../redux/store */ "./src/redux/store.ts");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var _redux_mainReducer__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../redux/mainReducer */ "./src/redux/mainReducer.ts");
 
 
 
@@ -60032,16 +60048,16 @@ __webpack_require__.r(__webpack_exports__);
 
 const RatesSection = () => {
     const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_16__.useDispatch)();
-    const draggingRowsEnabled = (0,_redux_store__WEBPACK_IMPORTED_MODULE_6__.useAppSelector)(store => store.main.draggingRowsEnabled);
-    const periodicExchangeRatesData = (0,_redux_store__WEBPACK_IMPORTED_MODULE_6__.useAppSelector)(store => store.main.periodicExchangeRatesData);
-    const currenciesOrderedList = (0,_redux_store__WEBPACK_IMPORTED_MODULE_6__.useAppSelector)(state => state.main.currenciesOrderedList);
+    const draggingRowsEnabled = (0,_redux_store__WEBPACK_IMPORTED_MODULE_14__.useAppSelector)(store => store.main.draggingRowsEnabled);
+    const periodicExchangeRatesData = (0,_redux_store__WEBPACK_IMPORTED_MODULE_14__.useAppSelector)(store => store.main.periodicExchangeRatesData);
+    const currenciesOrderedList = (0,_redux_store__WEBPACK_IMPORTED_MODULE_14__.useAppSelector)(state => state.main.currenciesOrderedList);
     const toggleDraggingsRows = () => {
-        dispatch((0,_redux_mainReducer__WEBPACK_IMPORTED_MODULE_5__.setDraggingRowsEnabled)(!draggingRowsEnabled));
+        dispatch((0,_redux_mainReducer__WEBPACK_IMPORTED_MODULE_15__.setDraggingRowsEnabled)(!draggingRowsEnabled));
     };
-    const [usingIsoNames, setUsingIsoNames] = (0,_utils_hooks_useLocalStorage__WEBPACK_IMPORTED_MODULE_8__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_9__["default"].useIsoCodesForNames, false);
-    const [measurePreciousMetalsInGrams, setMeasurePreciousMetalsInGrams] = (0,_utils_hooks_useLocalStorage__WEBPACK_IMPORTED_MODULE_8__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_9__["default"].useGramsForMetals, true);
-    const [baseCurrencyIso, setBaseCurrencyIso] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(_utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_10__.CurrencyIso.rub);
-    const currencyMenuItems = _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_10__.cisCurrenciesDataArray.map((currencyData, index) => ({
+    const [usingIsoNames, setUsingIsoNames] = (0,_utils_hooks_useLocalStorage__WEBPACK_IMPORTED_MODULE_13__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_12__["default"].useIsoCodesForNames, false);
+    const [measurePreciousMetalsInGrams, setMeasurePreciousMetalsInGrams] = (0,_utils_hooks_useLocalStorage__WEBPACK_IMPORTED_MODULE_13__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_12__["default"].useGramsForMetals, true);
+    const [baseCurrencyIso, setBaseCurrencyIso] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(_utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_6__.CurrencyIso.rub);
+    const currencyMenuItems = _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_6__.cisCurrenciesDataArray.map((currencyData, index) => ({
         label: `${currencyData.symbol} ${currencyData.name} (${currencyData.currencySymbol})`,
         id: currencyData.iso,
     }));
@@ -60054,36 +60070,43 @@ const RatesSection = () => {
         retryDelay: 1000,
     });
     const ratesMonthAgoQuery = (0,_tanstack_react_query__WEBPACK_IMPORTED_MODULE_17__.useQuery)({
-        queryKey: ['rates', baseCurrencyIso, _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_14__.datePeriodStrings.monthAgo],
-        queryFn: () => (0,_utils_requests_currencyApiRequest__WEBPACK_IMPORTED_MODULE_11__.currencyApiRequest)(baseCurrencyIso, _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_14__.datePeriodStrings.monthAgo),
+        queryKey: ['rates', baseCurrencyIso, _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.datePeriodStrings.monthAgo],
+        queryFn: () => (0,_utils_requests_currencyApiRequest__WEBPACK_IMPORTED_MODULE_11__.currencyApiRequest)(baseCurrencyIso, _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.datePeriodStrings.monthAgo),
         refetchInterval: 2700000,
         enabled: ratesLatestQuery.isSuccess,
         retry: 1,
     });
     const ratesHalfYearAgoQuery = (0,_tanstack_react_query__WEBPACK_IMPORTED_MODULE_17__.useQuery)({
-        queryKey: ['rates', baseCurrencyIso, _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_14__.datePeriodStrings.halfYearAgo],
-        queryFn: () => (0,_utils_requests_currencyApiRequest__WEBPACK_IMPORTED_MODULE_11__.currencyApiRequest)(baseCurrencyIso, _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_14__.datePeriodStrings.halfYearAgo),
+        queryKey: ['rates', baseCurrencyIso, _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.datePeriodStrings.halfYearAgo],
+        queryFn: () => (0,_utils_requests_currencyApiRequest__WEBPACK_IMPORTED_MODULE_11__.currencyApiRequest)(baseCurrencyIso, _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.datePeriodStrings.halfYearAgo),
         refetchInterval: 16200000,
         enabled: ratesMonthAgoQuery.isSuccess,
         retry: 1,
     });
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
         const updated = {
-            [_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_14__.Period.latest]: (0,_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_14__.structureExchangeData)(_utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_10__.instrumentKeysList, ratesLatestQuery.data?.data),
-            [_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_14__.Period.monthAgo]: (0,_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_14__.structureExchangeData)(_utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_10__.instrumentKeysList, ratesMonthAgoQuery.data?.data),
-            [_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_14__.Period.halfYearAgo]: (0,_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_14__.structureExchangeData)(_utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_10__.instrumentKeysList, ratesHalfYearAgoQuery.data?.data),
+            [_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.Period.latest]: (0,_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.structureExchangeData)(_utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_6__.instrumentKeysList, ratesLatestQuery.data?.data),
+            [_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.Period.monthAgo]: (0,_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.structureExchangeData)(_utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_6__.instrumentKeysList, ratesMonthAgoQuery.data?.data),
+            [_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.Period.halfYearAgo]: (0,_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.structureExchangeData)(_utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_6__.instrumentKeysList, ratesHalfYearAgoQuery.data?.data),
         };
-        dispatch((0,_redux_mainReducer__WEBPACK_IMPORTED_MODULE_5__.setPeriodicExchangeRatesData)(updated));
+        dispatch((0,_redux_mainReducer__WEBPACK_IMPORTED_MODULE_15__.setPeriodicExchangeRatesData)(updated));
     }, [
-        _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_10__.instrumentKeysList,
+        _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_6__.instrumentKeysList,
         ratesLatestQuery.data,
         ratesMonthAgoQuery.data,
         ratesHalfYearAgoQuery.data,
     ]);
+    // const testData = structureExchangeData(instrumentKeysList, ratesDefault[CurrencyIso.rub]);
+    // const filteredCurrencyKeysList = currencyKeysList;
+    // const periodicExchangeRatesData = {
+    //   [Period.latest]: cloneDeep(testData),
+    //   [Period.monthAgo]: cloneDeep(testData),
+    //   [Period.halfYearAgo]: cloneDeep(testData),
+    // }
     // ################################################################################################
     // ################################################################################################
-    const [reverseExchangeRates, setReverseExchangeRates] = (0,_utils_hooks_useLocalStorage__WEBPACK_IMPORTED_MODULE_8__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_9__["default"].useReverseExchangeRate, false);
-    const { name: baseCurrencyName, symbol: baseCurrencyFlag, } = _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_10__.cisCurrenciesData[baseCurrencyIso];
+    const [reverseExchangeRates, setReverseExchangeRates] = (0,_utils_hooks_useLocalStorage__WEBPACK_IMPORTED_MODULE_13__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_12__["default"].useReverseExchangeRate, false);
+    const { name: baseCurrencyName, symbol: baseCurrencyFlag, } = _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_6__.cisCurrenciesData[baseCurrencyIso];
     const baseCurrencyText = `${baseCurrencyFlag} ${baseCurrencyName}`;
     const baseTargetModeStrings = ['Валюта', ' / ', baseCurrencyText];
     const baseTargetModeText = (reverseExchangeRates ? baseTargetModeStrings.reverse() : baseTargetModeStrings).join('');
@@ -60091,7 +60114,7 @@ const RatesSection = () => {
         const filteredCurrencyKeysList = currenciesOrderedList
             .map((item) => item.iso)
             .filter((key) => key !== baseCurrencyIso);
-        return (0,_utils_addFlagsFormatting__WEBPACK_IMPORTED_MODULE_7__.addFlagsFormatting)((0,_getExampleText__WEBPACK_IMPORTED_MODULE_15__.getExampleText)({
+        return (0,_utils_addFlagsFormatting__WEBPACK_IMPORTED_MODULE_5__.addFlagsFormatting)((0,_getExampleText__WEBPACK_IMPORTED_MODULE_10__.getExampleText)({
             filteredCurrencyKeysList,
             baseCurrencyText,
             reverseExchangeRates,
@@ -60100,7 +60123,7 @@ const RatesSection = () => {
     }, [currenciesOrderedList, periodicExchangeRatesData, baseCurrencyText, reverseExchangeRates]);
     // ################################################################################################
     // ################################################################################################
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "section rates-section", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "rates-section__top", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "rates-section__top__menus", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_AppSelectorMenu_AppSelectorMenu__WEBPACK_IMPORTED_MODULE_2__["default"], { menuItems: currencyMenuItems, selectedItemId: baseCurrencyIso, onSelect: (iso) => setBaseCurrencyIso(iso), className: "rates-section__top__menus__item", modalClassName: "rates-section__top__menus__modal", styles: { padding: 0, margin: 0 } }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { className: "rates-section__top__menus__item rates-section__top__menus__base-target-switch", onClick: () => setReverseExchangeRates((prev) => !prev), children: (0,_utils_addFlagsFormatting__WEBPACK_IMPORTED_MODULE_7__.addFlagsFormatting)(baseTargetModeText) })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "rates-section__top__details", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "rates-section__top__details__item rates-section__top__details__item__example", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "rates-section__top__details__item__example__title", children: "\u041F\u0440\u0438\u043C\u0435\u0440:" }), exampleText ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: exampleText }) : (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_AppSpinner_AppSpinner__WEBPACK_IMPORTED_MODULE_3__["default"], { size: 24, thickness: 4 })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "rates-section__top__details__item", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("b", { children: "\u0415\u0434\u0438\u043D\u0438\u0446\u0430 \u0438\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F \u0434\u0440\u0430\u0433\u043E\u0446\u0435\u043D\u043D\u044B\u0445 \u043C\u0435\u0442\u0430\u043B\u043B\u043E\u0432:" }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_AppSwitchButton_AppSwitchButton__WEBPACK_IMPORTED_MODULE_4__["default"], { optionOneText: 'Грамм', optionTwoText: 'Тройская унция', firstOptionIsSelected: measurePreciousMetalsInGrams, setFirstOptionIsSelected: setMeasurePreciousMetalsInGrams, styles: { flex: 1 } })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", { className: "rates-section__top__details__item rates-section__iso-names-switch", onClick: () => setUsingIsoNames((prev) => !prev), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "rates-section__iso-names-switch__checkbox", children: usingIsoNames ? '✔' : '' }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C ISO \u043A\u043E\u0434\u044B \u0434\u043B\u044F \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0439 \u0432\u0430\u043B\u044E\u0442" })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", { className: "rates-section__top__details__item rates-section__iso-names-switch", onClick: toggleDraggingsRows, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "rates-section__iso-names-switch__checkbox", children: draggingRowsEnabled ? '✔' : '' }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: "\u0412\u043A\u043B\u044E\u0447\u0438\u0442\u044C \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u043F\u043E\u0440\u044F\u0434\u043A\u0430 \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442\u043E\u0432" })] })] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_ExchangeRatesTable__WEBPACK_IMPORTED_MODULE_13__["default"], { baseCurrencyIso: baseCurrencyIso, reverseExchangeRates: reverseExchangeRates, usingIsoNames: usingIsoNames, measurePreciousMetalsInGrams: measurePreciousMetalsInGrams })] }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "section rates-section", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "rates-section__top", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "rates-section__top__menus", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_AppSelectorMenu_AppSelectorMenu__WEBPACK_IMPORTED_MODULE_2__["default"], { menuItems: currencyMenuItems, selectedItemId: baseCurrencyIso, onSelect: (iso) => setBaseCurrencyIso(iso), className: "rates-section__top__menus__item", modalClassName: "rates-section__top__menus__modal", styles: { padding: 0, margin: 0 } }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { className: "rates-section__top__menus__item rates-section__top__menus__base-target-switch", onClick: () => setReverseExchangeRates((prev) => !prev), children: (0,_utils_addFlagsFormatting__WEBPACK_IMPORTED_MODULE_5__.addFlagsFormatting)(baseTargetModeText) })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "rates-section__top__details", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "rates-section__top__details__item rates-section__top__details__item__example", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "rates-section__top__details__item__example__title", children: "\u041F\u0440\u0438\u043C\u0435\u0440:" }), exampleText ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: exampleText }) : (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_AppSpinner_AppSpinner__WEBPACK_IMPORTED_MODULE_3__["default"], { size: 24, thickness: 4 })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "rates-section__top__details__item", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("b", { children: "\u0415\u0434\u0438\u043D\u0438\u0446\u0430 \u0438\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F \u0434\u0440\u0430\u0433\u043E\u0446\u0435\u043D\u043D\u044B\u0445 \u043C\u0435\u0442\u0430\u043B\u043B\u043E\u0432:" }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_AppSwitchButton_AppSwitchButton__WEBPACK_IMPORTED_MODULE_4__["default"], { optionOneText: 'Грамм', optionTwoText: 'Тройская унция', firstOptionIsSelected: measurePreciousMetalsInGrams, setFirstOptionIsSelected: setMeasurePreciousMetalsInGrams, styles: { flex: 1 } })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", { className: "rates-section__top__details__item rates-section__iso-names-switch", onClick: () => setUsingIsoNames((prev) => !prev), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "rates-section__iso-names-switch__checkbox", children: usingIsoNames ? '✔' : '' }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C ISO \u043A\u043E\u0434\u044B \u0434\u043B\u044F \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0439 \u0432\u0430\u043B\u044E\u0442" })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", { className: "rates-section__top__details__item rates-section__iso-names-switch", onClick: toggleDraggingsRows, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "rates-section__iso-names-switch__checkbox", children: draggingRowsEnabled ? '✔' : '' }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: "\u0412\u043A\u043B\u044E\u0447\u0438\u0442\u044C \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u043F\u043E\u0440\u044F\u0434\u043A\u0430 \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442\u043E\u0432" })] })] })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_ExchangeRatesTable__WEBPACK_IMPORTED_MODULE_8__["default"], { baseCurrencyIso: baseCurrencyIso, reverseExchangeRates: reverseExchangeRates, usingIsoNames: usingIsoNames, measurePreciousMetalsInGrams: measurePreciousMetalsInGrams })] }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RatesSection);
 
