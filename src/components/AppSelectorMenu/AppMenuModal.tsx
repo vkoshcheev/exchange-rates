@@ -1,5 +1,4 @@
-import { addModifierToClassWhenConditionIsTrue } from '../../utils/helper';
-import { useCloseModalOnClickOutside } from '../../utils/hooks/useCloseModalOnClickOutside';
+import { addModifierToClassWhenConditionIsTrue, useCloseModalOnClickOutside } from 'utils-library';
 import './AppMenuModal.scss';
 import { AppMenuItem } from './AppSelectorMenu';
 
@@ -28,10 +27,7 @@ function AppMenuModal({
   if (!modalIsOpen) return null;
 
   return (
-    <div
-      className={`app-menu-modal ${className || ''}`}
-      ref={modalRef}
-    >
+    <div className={`app-menu-modal ${className || ''}`} ref={modalRef}>
       {menuItems.map((menuItem, index) => {
         const isSelected = menuItem.id === selectedItemId;
 

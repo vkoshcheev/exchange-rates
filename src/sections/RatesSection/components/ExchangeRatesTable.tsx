@@ -24,7 +24,7 @@ import { useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import { setCurrenciesOrderedList } from '../../../redux/mainReducer';
 import { useAppSelector } from '../../../redux/store';
-import { useLocalStorage } from '../../../utils/hooks/useLocalStorage';
+import { useLocalStorage } from 'utils-library';
 import localStorageKeys from '../../../utils/localStorageKeys';
 import ExchangeRatesTableHeaders from './ExchangeRatesTableHeaders';
 

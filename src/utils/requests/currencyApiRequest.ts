@@ -1,6 +1,6 @@
 import axios from "axios";
-import { newLine, sleep } from "../helper";
 import { InstrumentIso } from "./currenciesList";
+import { newLine, sleep } from "utils-library";
 
 // https://github.com/fawazahmed0/exchange-api
 // date requires YYYY-MM-DD format

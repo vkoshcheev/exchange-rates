@@ -1,4 +1,4 @@
-import { useModalStateHooks } from '../../utils/hooks/useModalStateHooks';
+import { useModalStateHooks } from 'utils-library';
 import AppMenuArrow from './AppMenuArrow';
 import AppMenuModal from './AppMenuModal';
 import './AppSelectorMenu.scss';

@@ -2,13 +2,13 @@ import { useDroppable } from '@dnd-kit/core';
 import { useSortable } from '@dnd-kit/sortable';
 import { isNumber } from 'lodash';
 import React from 'react';
+import { addModifierToClassWhenConditionIsTrue } from 'utils-library';
 import AppSpinner from '../../../components/AppSpinner/AppSpinner';
-import { addModifierToClassWhenConditionIsTrue } from '../../../utils/helper';
+import { useAppSelector } from '../../../redux/store';
 import { CurrencyIso, InstrumentIso, cisCurrenciesData, instrumentsData } from '../../../utils/requests/currenciesList';
 import { Period, PeriodicCurrencyRatesData, periods } from '../fetchAndBuildCurrencyExchangeRatesData';
 import './ExchangeRatesTableRow.scss';
 import InstrumentPercentageChangeComponent from './InstrumentPercentageChangeComponent';
-import { useAppSelector } from '../../../redux/store';
 
 const ExchangeRatesTableRow = ({
   id,

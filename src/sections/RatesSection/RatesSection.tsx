@@ -7,7 +7,7 @@ import AppSwitchButton from '../../components/AppSwitchButton/AppSwitchButton';
 import { setDraggingRowsEnabled, setPeriodicExchangeRatesData } from '../../redux/mainReducer';
 import { useAppSelector } from '../../redux/store';
 import { addFlagsFormatting } from '../../utils/addFlagsFormatting';
-import { useLocalStorage } from '../../utils/hooks/useLocalStorage';
+import { useLocalStorage } from 'utils-library';
 import localStorageKeys from '../../utils/localStorageKeys';
 import {
   CurrencyIso,
