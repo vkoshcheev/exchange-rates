@@ -59670,15 +59670,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _utils_helper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/helper */ "./src/utils/helper.ts");
-/* harmony import */ var _utils_hooks_useCloseModalOnClickOutside__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/hooks/useCloseModalOnClickOutside */ "./src/utils/hooks/useCloseModalOnClickOutside.ts");
-/* harmony import */ var _AppMenuModal_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AppMenuModal.scss */ "./src/components/AppSelectorMenu/AppMenuModal.scss");
-
+/* harmony import */ var utils_library__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! utils-library */ "./node_modules/utils-library/dist/index.js");
+/* harmony import */ var _AppMenuModal_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AppMenuModal.scss */ "./src/components/AppSelectorMenu/AppMenuModal.scss");
 
 
 
 function AppMenuModal({ modalIsOpen, closeModal, menuItems, selectedItemId, onSelect, className, }) {
-    const { modalRef } = (0,_utils_hooks_useCloseModalOnClickOutside__WEBPACK_IMPORTED_MODULE_2__.useCloseModalOnClickOutside)({ closeModal });
+    const { modalRef } = (0,utils_library__WEBPACK_IMPORTED_MODULE_1__.useCloseModalOnClickOutside)({ closeModal });
     const onSelectMenuItem = (id) => {
         onSelect(id);
         closeModal();
@@ -59687,7 +59685,7 @@ function AppMenuModal({ modalIsOpen, closeModal, menuItems, selectedItemId, onSe
         return null;
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: `app-menu-modal ${className || ''}`, ref: modalRef, children: menuItems.map((menuItem, index) => {
             const isSelected = menuItem.id === selectedItemId;
-            return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { className: (0,_utils_helper__WEBPACK_IMPORTED_MODULE_1__.addModifierToClassWhenConditionIsTrue)('app-menu-modal__item', isSelected), onClick: () => onSelectMenuItem(menuItem.id), children: menuItem.label }, index));
+            return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", { className: (0,utils_library__WEBPACK_IMPORTED_MODULE_1__.addModifierToClassWhenConditionIsTrue)('app-menu-modal__item', isSelected), onClick: () => onSelectMenuItem(menuItem.id), children: menuItem.label }, index));
         }) }));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AppMenuModal);
@@ -59707,7 +59705,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _utils_hooks_useModalStateHooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/hooks/useModalStateHooks */ "./src/utils/hooks/useModalStateHooks.ts");
+/* harmony import */ var utils_library__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! utils-library */ "./node_modules/utils-library/dist/index.js");
 /* harmony import */ var _AppMenuArrow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AppMenuArrow */ "./src/components/AppSelectorMenu/AppMenuArrow.tsx");
 /* harmony import */ var _AppMenuModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AppMenuModal */ "./src/components/AppSelectorMenu/AppMenuModal.tsx");
 /* harmony import */ var _AppSelectorMenu_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./AppSelectorMenu.scss */ "./src/components/AppSelectorMenu/AppSelectorMenu.scss");
@@ -59718,7 +59716,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const AppSelectorMenu = ({ menuItems, selectedItemId, onSelect, className, modalClassName, styles, }) => {
     const selectedValueLabel = menuItems.find((item) => item.id === selectedItemId)?.label;
-    const { modalIsOpen, closeModal, toggleModal } = (0,_utils_hooks_useModalStateHooks__WEBPACK_IMPORTED_MODULE_1__.useModalStateHooks)();
+    const { modalIsOpen, closeModal, toggleModal } = (0,utils_library__WEBPACK_IMPORTED_MODULE_1__.useModalStateHooks)();
     const onMenuButtonClick = (event) => {
         event.stopPropagation();
         toggleModal();
@@ -60024,10 +60022,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tanstack_react_query__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @tanstack/react-query */ "./node_modules/@tanstack/react-query/build/modern/useQuery.js");
 /* harmony import */ var _utils_requests_currencyApiRequest__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../utils/requests/currencyApiRequest */ "./src/utils/requests/currencyApiRequest.ts");
 /* harmony import */ var _utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../utils/localStorageKeys */ "./src/utils/localStorageKeys.ts");
-/* harmony import */ var _utils_hooks_useLocalStorage__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../utils/hooks/useLocalStorage */ "./src/utils/hooks/useLocalStorage.ts");
-/* harmony import */ var _redux_store__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../redux/store */ "./src/redux/store.ts");
+/* harmony import */ var _redux_store__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../redux/store */ "./src/redux/store.ts");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/dist/react-redux.mjs");
-/* harmony import */ var _redux_mainReducer__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../redux/mainReducer */ "./src/redux/mainReducer.ts");
+/* harmony import */ var _redux_mainReducer__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../redux/mainReducer */ "./src/redux/mainReducer.ts");
+/* harmony import */ var utils_library__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! utils-library */ "./node_modules/utils-library/dist/index.js");
 
 
 
@@ -60048,14 +60046,14 @@ __webpack_require__.r(__webpack_exports__);
 
 const RatesSection = () => {
     const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_16__.useDispatch)();
-    const draggingRowsEnabled = (0,_redux_store__WEBPACK_IMPORTED_MODULE_14__.useAppSelector)(store => store.main.draggingRowsEnabled);
-    const periodicExchangeRatesData = (0,_redux_store__WEBPACK_IMPORTED_MODULE_14__.useAppSelector)(store => store.main.periodicExchangeRatesData);
-    const currenciesOrderedList = (0,_redux_store__WEBPACK_IMPORTED_MODULE_14__.useAppSelector)(state => state.main.currenciesOrderedList);
+    const draggingRowsEnabled = (0,_redux_store__WEBPACK_IMPORTED_MODULE_13__.useAppSelector)(store => store.main.draggingRowsEnabled);
+    const periodicExchangeRatesData = (0,_redux_store__WEBPACK_IMPORTED_MODULE_13__.useAppSelector)(store => store.main.periodicExchangeRatesData);
+    const currenciesOrderedList = (0,_redux_store__WEBPACK_IMPORTED_MODULE_13__.useAppSelector)(state => state.main.currenciesOrderedList);
     const toggleDraggingsRows = () => {
-        dispatch((0,_redux_mainReducer__WEBPACK_IMPORTED_MODULE_15__.setDraggingRowsEnabled)(!draggingRowsEnabled));
+        dispatch((0,_redux_mainReducer__WEBPACK_IMPORTED_MODULE_14__.setDraggingRowsEnabled)(!draggingRowsEnabled));
     };
-    const [usingIsoNames, setUsingIsoNames] = (0,_utils_hooks_useLocalStorage__WEBPACK_IMPORTED_MODULE_13__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_12__["default"].useIsoCodesForNames, false);
-    const [measurePreciousMetalsInGrams, setMeasurePreciousMetalsInGrams] = (0,_utils_hooks_useLocalStorage__WEBPACK_IMPORTED_MODULE_13__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_12__["default"].useGramsForMetals, true);
+    const [usingIsoNames, setUsingIsoNames] = (0,utils_library__WEBPACK_IMPORTED_MODULE_15__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_12__["default"].useIsoCodesForNames, false);
+    const [measurePreciousMetalsInGrams, setMeasurePreciousMetalsInGrams] = (0,utils_library__WEBPACK_IMPORTED_MODULE_15__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_12__["default"].useGramsForMetals, true);
     const [baseCurrencyIso, setBaseCurrencyIso] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(_utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_6__.CurrencyIso.rub);
     const currencyMenuItems = _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_6__.cisCurrenciesDataArray.map((currencyData, index) => ({
         label: `${currencyData.symbol} ${currencyData.name} (${currencyData.currencySymbol})`,
@@ -60089,7 +60087,7 @@ const RatesSection = () => {
             [_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.Period.monthAgo]: (0,_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.structureExchangeData)(_utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_6__.instrumentKeysList, ratesMonthAgoQuery.data?.data),
             [_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.Period.halfYearAgo]: (0,_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.structureExchangeData)(_utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_6__.instrumentKeysList, ratesHalfYearAgoQuery.data?.data),
         };
-        dispatch((0,_redux_mainReducer__WEBPACK_IMPORTED_MODULE_15__.setPeriodicExchangeRatesData)(updated));
+        dispatch((0,_redux_mainReducer__WEBPACK_IMPORTED_MODULE_14__.setPeriodicExchangeRatesData)(updated));
     }, [
         _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_6__.instrumentKeysList,
         ratesLatestQuery.data,
@@ -60105,7 +60103,7 @@ const RatesSection = () => {
     // }
     // ################################################################################################
     // ################################################################################################
-    const [reverseExchangeRates, setReverseExchangeRates] = (0,_utils_hooks_useLocalStorage__WEBPACK_IMPORTED_MODULE_13__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_12__["default"].useReverseExchangeRate, false);
+    const [reverseExchangeRates, setReverseExchangeRates] = (0,utils_library__WEBPACK_IMPORTED_MODULE_15__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_12__["default"].useReverseExchangeRate, false);
     const { name: baseCurrencyName, symbol: baseCurrencyFlag, } = _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_6__.cisCurrenciesData[baseCurrencyIso];
     const baseCurrencyText = `${baseCurrencyFlag} ${baseCurrencyName}`;
     const baseTargetModeStrings = ['Валюта', ' / ', baseCurrencyText];
@@ -60156,7 +60154,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _redux_mainReducer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../redux/mainReducer */ "./src/redux/mainReducer.ts");
 /* harmony import */ var _redux_store__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../redux/store */ "./src/redux/store.ts");
-/* harmony import */ var _utils_hooks_useLocalStorage__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../utils/hooks/useLocalStorage */ "./src/utils/hooks/useLocalStorage.ts");
+/* harmony import */ var utils_library__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! utils-library */ "./node_modules/utils-library/dist/index.js");
 /* harmony import */ var _utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../utils/localStorageKeys */ "./src/utils/localStorageKeys.ts");
 /* harmony import */ var _ExchangeRatesTableHeaders__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./ExchangeRatesTableHeaders */ "./src/sections/RatesSection/components/ExchangeRatesTableHeaders.tsx");
 
@@ -60180,8 +60178,8 @@ const ExchangeRatesTable = ({ baseCurrencyIso, reverseExchangeRates, usingIsoNam
     const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_15__.useDispatch)();
     const draggingRowsEnabled = (0,_redux_store__WEBPACK_IMPORTED_MODULE_11__.useAppSelector)(store => store.main.draggingRowsEnabled);
     const periodicExchangeRatesData = (0,_redux_store__WEBPACK_IMPORTED_MODULE_11__.useAppSelector)(store => store.main.periodicExchangeRatesData);
-    const [sortedCurrencyKeys, setSortedCurrencyKeys] = (0,_utils_hooks_useLocalStorage__WEBPACK_IMPORTED_MODULE_12__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_13__["default"].currenciesOrder, _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_2__.defaultCurrencyKeysListWithIds);
-    const [sortedMetalsKeys, setSortedMetalsKeys] = (0,_utils_hooks_useLocalStorage__WEBPACK_IMPORTED_MODULE_12__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_13__["default"].metalsOrder, _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_2__.defaultMetalKeysListWithIds);
+    const [sortedCurrencyKeys, setSortedCurrencyKeys] = (0,utils_library__WEBPACK_IMPORTED_MODULE_12__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_13__["default"].currenciesOrder, _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_2__.defaultCurrencyKeysListWithIds);
+    const [sortedMetalsKeys, setSortedMetalsKeys] = (0,utils_library__WEBPACK_IMPORTED_MODULE_12__.useLocalStorage)(_utils_localStorageKeys__WEBPACK_IMPORTED_MODULE_13__["default"].metalsOrder, _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_2__.defaultMetalKeysListWithIds);
     const filteredCurrencyKeysList = (0,react__WEBPACK_IMPORTED_MODULE_9__.useMemo)(() => sortedCurrencyKeys.filter((item) => item.iso !== baseCurrencyIso), [baseCurrencyIso, sortedCurrencyKeys]);
     const sensors = [
         (0,_dnd_kit_core__WEBPACK_IMPORTED_MODULE_6__.useSensor)(_dnd_kit_core__WEBPACK_IMPORTED_MODULE_6__.PointerSensor),
@@ -60267,13 +60265,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_AppSpinner_AppSpinner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../components/AppSpinner/AppSpinner */ "./src/components/AppSpinner/AppSpinner.tsx");
-/* harmony import */ var _utils_helper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../utils/helper */ "./src/utils/helper.ts");
-/* harmony import */ var _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../utils/requests/currenciesList */ "./src/utils/requests/currenciesList.ts");
-/* harmony import */ var _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../fetchAndBuildCurrencyExchangeRatesData */ "./src/sections/RatesSection/fetchAndBuildCurrencyExchangeRatesData.ts");
-/* harmony import */ var _ExchangeRatesTableRow_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ExchangeRatesTableRow.scss */ "./src/sections/RatesSection/components/ExchangeRatesTableRow.scss");
-/* harmony import */ var _InstrumentPercentageChangeComponent__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./InstrumentPercentageChangeComponent */ "./src/sections/RatesSection/components/InstrumentPercentageChangeComponent.tsx");
-/* harmony import */ var _redux_store__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../redux/store */ "./src/redux/store.ts");
+/* harmony import */ var utils_library__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! utils-library */ "./node_modules/utils-library/dist/index.js");
+/* harmony import */ var _components_AppSpinner_AppSpinner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../components/AppSpinner/AppSpinner */ "./src/components/AppSpinner/AppSpinner.tsx");
+/* harmony import */ var _redux_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../redux/store */ "./src/redux/store.ts");
+/* harmony import */ var _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../utils/requests/currenciesList */ "./src/utils/requests/currenciesList.ts");
+/* harmony import */ var _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../fetchAndBuildCurrencyExchangeRatesData */ "./src/sections/RatesSection/fetchAndBuildCurrencyExchangeRatesData.ts");
+/* harmony import */ var _ExchangeRatesTableRow_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ExchangeRatesTableRow.scss */ "./src/sections/RatesSection/components/ExchangeRatesTableRow.scss");
+/* harmony import */ var _InstrumentPercentageChangeComponent__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./InstrumentPercentageChangeComponent */ "./src/sections/RatesSection/components/InstrumentPercentageChangeComponent.tsx");
 
 
 
@@ -60287,7 +60285,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const ExchangeRatesTableRow = ({ id, iso, baseCurrencyIso, periodicExchangeRatesData, reverseExchangeRates, precision, usingIsoNames, isFirst = false, }) => {
-    const draggingRowsEnabled = (0,_redux_store__WEBPACK_IMPORTED_MODULE_11__.useAppSelector)(store => store.main.draggingRowsEnabled);
+    const draggingRowsEnabled = (0,_redux_store__WEBPACK_IMPORTED_MODULE_7__.useAppSelector)(store => store.main.draggingRowsEnabled);
     const { setNodeRef: setDroppableRef } = (0,_dnd_kit_core__WEBPACK_IMPORTED_MODULE_1__.useDroppable)({ id });
     const { attributes, listeners, setNodeRef, transform } = (0,_dnd_kit_sortable__WEBPACK_IMPORTED_MODULE_2__.useSortable)({ id });
     const draggableStyle = {
@@ -60297,22 +60295,22 @@ const ExchangeRatesTableRow = ({ id, iso, baseCurrencyIso, periodicExchangeRates
     };
     // ########################################################################################
     // ########################################################################################
-    const { symbol: baseCurrencyFlag, currencySymbol: baseCurrencySymbol, } = _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_7__.cisCurrenciesData[baseCurrencyIso];
-    const instrumentData = _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_7__.instrumentsData[iso];
+    const { symbol: baseCurrencyFlag, currencySymbol: baseCurrencySymbol, } = _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_8__.cisCurrenciesData[baseCurrencyIso];
+    const instrumentData = _utils_requests_currenciesList__WEBPACK_IMPORTED_MODULE_8__.instrumentsData[iso];
     const { currencySymbol: currentCurrencySymbol = '' } = { ...instrumentData };
     const currencySymbol = reverseExchangeRates ? currentCurrencySymbol : baseCurrencySymbol;
     const formulaDirection = reverseExchangeRates ? 'direct' : 'reverse';
-    let rates = Object.fromEntries(Object.values(_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_8__.Period).map((period) => {
+    let rates = Object.fromEntries(Object.values(_fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.Period).map((period) => {
         const value = periodicExchangeRatesData[period]?.[iso][formulaDirection];
         return [period, (0,lodash__WEBPACK_IMPORTED_MODULE_3__.isNumber)(value) ? value : null];
     }));
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [!isFirst && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", { className: "instrument-row__data-separator", colSpan: 3 }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", { className: "instrument-row__data-separator hide-below-720", colSpan: 2 })] })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", { ref: (node) => {
                     setNodeRef(node);
                     setDroppableRef(node); // row is both draggable and droppable
-                }, ...attributes, ...listeners, className: (0,_utils_helper__WEBPACK_IMPORTED_MODULE_6__.addModifierToClassWhenConditionIsTrue)('instrument-row', isFirst, '--first'), style: { borderTopStyle: isFirst ? 'solid' : undefined, ...draggableStyle }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: (0,_utils_helper__WEBPACK_IMPORTED_MODULE_6__.addModifierToClassWhenConditionIsTrue)('instrument-row__instrument-name', !reverseExchangeRates, '--reverse'), children: !usingIsoNames ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", { className: "instrument-row__instrument-name__text", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "instrument-row__instrument-name__text__symbol", children: instrumentData.symbol }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "linebreak-after-every-word", children: instrumentData.name })] })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", { className: "instrument-row__instrument-name__text", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "instrument-row__instrument-name__text__symbol", children: baseCurrencyFlag }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { style: { fontFamily: 'monospace' }, children: baseCurrencyIso.toUpperCase() })] }), "\u00A0/\u00A0", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", { className: "instrument-row__instrument-name__text", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "instrument-row__instrument-name__text__symbol", children: instrumentData.symbol }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { style: { fontFamily: 'monospace' }, children: instrumentData.iso.toUpperCase() })] })] })) }) }), _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_8__.periods.map((period) => {
-                        const isLatest = period === _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_8__.Period.latest;
+                }, ...attributes, ...listeners, className: (0,utils_library__WEBPACK_IMPORTED_MODULE_5__.addModifierToClassWhenConditionIsTrue)('instrument-row', isFirst, '--first'), style: { borderTopStyle: isFirst ? 'solid' : undefined, ...draggableStyle }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: (0,utils_library__WEBPACK_IMPORTED_MODULE_5__.addModifierToClassWhenConditionIsTrue)('instrument-row__instrument-name', !reverseExchangeRates, '--reverse'), children: !usingIsoNames ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", { className: "instrument-row__instrument-name__text", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "instrument-row__instrument-name__text__symbol", children: instrumentData.symbol }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "linebreak-after-every-word", children: instrumentData.name })] })) : ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", { className: "instrument-row__instrument-name__text", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "instrument-row__instrument-name__text__symbol", children: baseCurrencyFlag }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { style: { fontFamily: 'monospace' }, children: baseCurrencyIso.toUpperCase() })] }), "\u00A0/\u00A0", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", { className: "instrument-row__instrument-name__text", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "instrument-row__instrument-name__text__symbol", children: instrumentData.symbol }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { style: { fontFamily: 'monospace' }, children: instrumentData.iso.toUpperCase() })] })] })) }) }), _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.periods.map((period) => {
+                        const isLatest = period === _fetchAndBuildCurrencyExchangeRatesData__WEBPACK_IMPORTED_MODULE_9__.Period.latest;
                         if (rates[period] === null)
-                            return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", { className: "instrument-row__instrument-spinner", colSpan: isLatest ? 2 : 1, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_AppSpinner_AppSpinner__WEBPACK_IMPORTED_MODULE_5__["default"], { styles: {
+                            return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", { className: "instrument-row__instrument-spinner", colSpan: isLatest ? 2 : 1, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_AppSpinner_AppSpinner__WEBPACK_IMPORTED_MODULE_6__["default"], { styles: {
                                         display: 'flex',
                                         flexDirection: 'row',
                                         width: '100%',
@@ -60320,7 +60318,7 @@ const ExchangeRatesTableRow = ({ id, iso, baseCurrencyIso, periodicExchangeRates
                                     } }) }, period));
                         if (isLatest)
                             return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((react__WEBPACK_IMPORTED_MODULE_4___default().Fragment), { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", { className: "instrument-row__instrument-rate", children: rates[period].toFixed(precision) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", { className: "instrument-row__instrument-rate__currency-symbol", children: currencySymbol })] }, period));
-                        return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("td", { className: "hide-below-720", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "instrument-row__instrument-rate", children: rates[period].toFixed(precision) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_InstrumentPercentageChangeComponent__WEBPACK_IMPORTED_MODULE_10__["default"], { className: "instrument-row__instrument-rate", periodicExchangeRatesData: periodicExchangeRatesData, instrumentIso: iso, period: period, reverseExchangeRates: reverseExchangeRates })] }, period));
+                        return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("td", { className: "hide-below-720", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "instrument-row__instrument-rate", children: rates[period].toFixed(precision) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_InstrumentPercentageChangeComponent__WEBPACK_IMPORTED_MODULE_11__["default"], { className: "instrument-row__instrument-rate", periodicExchangeRatesData: periodicExchangeRatesData, instrumentIso: iso, period: period, reverseExchangeRates: reverseExchangeRates })] }, period));
                     })] })] }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ExchangeRatesTableRow);
@@ -60522,130 +60520,6 @@ const addFlagsFormatting = (input) => {
 
 /***/ }),
 
-/***/ "./src/utils/helper.ts":
-/*!*****************************!*\
-  !*** ./src/utils/helper.ts ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   addModifierToClass: () => (/* binding */ addModifierToClass),
-/* harmony export */   addModifierToClassWhenConditionIsTrue: () => (/* binding */ addModifierToClassWhenConditionIsTrue),
-/* harmony export */   getCssUrl: () => (/* binding */ getCssUrl),
-/* harmony export */   newLine: () => (/* binding */ newLine),
-/* harmony export */   sleep: () => (/* binding */ sleep)
-/* harmony export */ });
-const sleep = (ms) => new Promise(r => setTimeout(r, ms || 0));
-function getCssUrl(input) {
-    return `url("${input}")`;
-}
-const newLine = '\r\n';
-const addModifierToClass = (className, modifier) => {
-    return `${className} ${className}${modifier}`;
-};
-const addModifierToClassWhenConditionIsTrue = (className, condition, modifier = '--selected') => {
-    return condition ? addModifierToClass(className, modifier) : className;
-};
-
-
-/***/ }),
-
-/***/ "./src/utils/hooks/useCloseModalOnClickOutside.ts":
-/*!********************************************************!*\
-  !*** ./src/utils/hooks/useCloseModalOnClickOutside.ts ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   useCloseModalOnClickOutside: () => (/* binding */ useCloseModalOnClickOutside)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _helper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../helper */ "./src/utils/helper.ts");
-
-
-const useCloseModalOnClickOutside = ({ closeModal }) => {
-    const modalRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-    const handleClickOutside = (event) => {
-        if (modalRef.current && !modalRef.current.contains(event.target)) {
-            (0,_helper__WEBPACK_IMPORTED_MODULE_1__.sleep)().then(() => closeModal());
-        }
-    };
-    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-        document.addEventListener('mouseup', handleClickOutside);
-        return () => {
-            document.removeEventListener('mouseup', handleClickOutside);
-        };
-    }, []);
-    return { modalRef };
-};
-
-
-/***/ }),
-
-/***/ "./src/utils/hooks/useLocalStorage.ts":
-/*!********************************************!*\
-  !*** ./src/utils/hooks/useLocalStorage.ts ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   useLocalStorage: () => (/* binding */ useLocalStorage)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-function useLocalStorage(key, defaultValue) {
-    const [value, setValue] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(() => {
-        const storedValue = localStorage.getItem(key);
-        if (storedValue === null)
-            return defaultValue;
-        return JSON.parse(storedValue);
-    });
-    const setLocalStorageValue = (newValue) => {
-        setValue((prev) => {
-            const valueToStore = typeof newValue === 'function' ? newValue(prev) : newValue;
-            localStorage.setItem(key, JSON.stringify(valueToStore));
-            return valueToStore;
-        });
-    };
-    return [value, setLocalStorageValue];
-}
-
-
-/***/ }),
-
-/***/ "./src/utils/hooks/useModalStateHooks.ts":
-/*!***********************************************!*\
-  !*** ./src/utils/hooks/useModalStateHooks.ts ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   useModalStateHooks: () => (/* binding */ useModalStateHooks)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-const useModalStateHooks = () => {
-    const [modalIsOpen, setModalIsOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-    const openModal = () => setModalIsOpen(true);
-    const closeModal = () => setModalIsOpen(false);
-    const toggleModal = () => setModalIsOpen(!modalIsOpen);
-    return { modalIsOpen, openModal, closeModal, toggleModal };
-};
-
-
-/***/ }),
-
 /***/ "./src/utils/localStorageKeys.ts":
 /*!***************************************!*\
   !*** ./src/utils/localStorageKeys.ts ***!
@@ -60773,14 +60647,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   currencyApiRequest: () => (/* binding */ currencyApiRequest)
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
-/* harmony import */ var _helper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helper */ "./src/utils/helper.ts");
+/* harmony import */ var utils_library__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! utils-library */ "./node_modules/utils-library/dist/index.js");
 
 
 // https://github.com/fawazahmed0/exchange-api
 // date requires YYYY-MM-DD format
 // (!) api only has data up to about half a year
 const currencyApiRequest = async (instrumentIso, date = 'latest') => {
-    await (0,_helper__WEBPACK_IMPORTED_MODULE_0__.sleep)(500);
+    await (0,utils_library__WEBPACK_IMPORTED_MODULE_0__.sleep)(500);
     const endpoint = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@`;
     const mainUrl = `${endpoint}${date}/v1/currencies/${instrumentIso}.json`;
     // const altUrl = `https://${date}.currency-api.pages.dev/v1/currencies/${instrumentIso}.json`;
@@ -60792,7 +60666,7 @@ const currencyApiRequest = async (instrumentIso, date = 'latest') => {
         return { data, success: true };
     }
     catch (e) {
-        console.log('Error fetching exchange rates:', `${_helper__WEBPACK_IMPORTED_MODULE_0__.newLine}${JSON.stringify(e)}$`);
+        console.log('Error fetching exchange rates:', `${utils_library__WEBPACK_IMPORTED_MODULE_0__.newLine}${JSON.stringify(e)}$`);
         return { success: false };
     }
 };
@@ -60920,6 +60794,43 @@ if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/use-sync-external-store-with-selector.development.js */ "./node_modules/use-sync-external-store/cjs/use-sync-external-store-with-selector.development.js");
 }
 
+
+/***/ }),
+
+/***/ "./node_modules/utils-library/dist/index.js":
+/*!**************************************************!*\
+  !*** ./node_modules/utils-library/dist/index.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   addModifierToClass: () => (/* binding */ te),
+/* harmony export */   addModifierToClassWhenConditionIsTrue: () => (/* binding */ ne),
+/* harmony export */   cacheImages: () => (/* binding */ oe),
+/* harmony export */   formatFileSizeText: () => (/* binding */ ie),
+/* harmony export */   formatUnixTimeToDateMoscowTime: () => (/* binding */ ae),
+/* harmony export */   getImageUrlForCss: () => (/* binding */ re),
+/* harmony export */   isEmailValid: () => (/* binding */ G),
+/* harmony export */   isPhoneNumberValid: () => (/* binding */ Q),
+/* harmony export */   newLine: () => (/* binding */ ue),
+/* harmony export */   scrollToBlockRef: () => (/* binding */ V),
+/* harmony export */   scrollToTop: () => (/* binding */ X),
+/* harmony export */   sleep: () => (/* binding */ r),
+/* harmony export */   useCloseModalOnClickOutside: () => (/* binding */ a),
+/* harmony export */   useComponentDidUpdate: () => (/* binding */ c),
+/* harmony export */   useDisableScroll: () => (/* binding */ u),
+/* harmony export */   useIsClient: () => (/* binding */ s),
+/* harmony export */   useLocalStorage: () => (/* binding */ f),
+/* harmony export */   useModalStateHooks: () => (/* binding */ d),
+/* harmony export */   useScrollToTop: () => (/* binding */ ce),
+/* harmony export */   useWebVitals: () => (/* binding */ _),
+/* harmony export */   withOpacity: () => (/* binding */ ee)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var t={d:(e,n)=>{for(var r in n)t.o(n,r)&&!t.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:n[r]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t)};const n=(o={useEffect:()=>react__WEBPACK_IMPORTED_MODULE_0__.useEffect,useRef:()=>react__WEBPACK_IMPORTED_MODULE_0__.useRef,useState:()=>react__WEBPACK_IMPORTED_MODULE_0__.useState},i={},t.d(i,o),i),r=e=>new Promise((t=>setTimeout(t,e||0)));var o,i;function a({closeModal:e}){const t=(0,n.useRef)(null);return(0,n.useEffect)((()=>{const n=n=>{t.current&&!t.current.contains(n.target)&&r().then((()=>e()))};return document.addEventListener("mouseup",n),()=>{document.removeEventListener("mouseup",n)}}),[e]),{modalRef:t}}function c(e,t){const r=(0,n.useRef)({isComponentMounted:!1}),o=(0,n.useRef)(t);(0,n.useEffect)((()=>(r.current.isComponentMounted?(e(o.current,t),o.current=t):r.current.isComponentMounted=!0,()=>{r.current.isComponentMounted=!1})),t)}const u=e=>{const t=window.innerWidth-document.body.offsetWidth;(0,n.useEffect)((()=>{const n="unset";document.body.style.overflowY=e?"hidden":n,document.documentElement.style.overflowY=e?"hidden":n;const r=document.getElementsByClassName("appContainer")[0];return r&&(r.style.paddingRight=e?2*t+"px":"0px",r.style.marginRight=e?`-${t}px`:"0px"),()=>{document.body.style.overflowY=n,document.documentElement.style.overflowY=n,r&&(r.style.paddingRight="0px",r.style.marginRight="0px")}}),[e])};function s(){const[e,t]=(0,n.useState)(!1);return(0,n.useEffect)((()=>{t(!0)}),[]),e}function f(e,t){const[r,o]=(0,n.useState)((()=>{if("undefined"!=typeof window){const n=localStorage.getItem(e);return null===n?t:JSON.parse(n)}return t}));return[r,t=>{"undefined"!=typeof window&&o((n=>{const r="function"==typeof t?t(n):t;return localStorage.setItem(e,JSON.stringify(r)),r}))}]}function d(){const[e,t]=(0,n.useState)(!1);return{modalIsOpen:e,openModal:()=>t(!0),closeModal:()=>t(!1),toggleModal:()=>t(!e)}}var l,m,p,v,g=-1,h=function(e){addEventListener("pageshow",(function(t){t.persisted&&(g=t.timeStamp,e(t))}),!0)},y=function(){var e=self.performance&&performance.getEntriesByType&&performance.getEntriesByType("navigation")[0];if(e&&e.responseStart>0&&e.responseStart<performance.now())return e},w=function(){var e=y();return e&&e.activationStart||0},E=function(e,t){var n=y(),r="navigate";return g>=0?r="back-forward-cache":n&&(document.prerendering||w()>0?r="prerender":document.wasDiscarded?r="restore":n.type&&(r=n.type.replace(/_/g,"-"))),{name:e,value:void 0===t?-1:t,rating:"good",delta:0,entries:[],id:"v4-".concat(Date.now(),"-").concat(Math.floor(8999999999999*Math.random())+1e12),navigationType:r}},S=function(e,t,n){try{if(PerformanceObserver.supportedEntryTypes.includes(e)){var r=new PerformanceObserver((function(e){Promise.resolve().then((function(){t(e.getEntries())}))}));return r.observe(Object.assign({type:e,buffered:!0},n||{})),r}}catch(e){}},T=function(e,t,n,r){var o,i;return function(a){t.value>=0&&(a||r)&&((i=t.value-(o||0))||void 0===o)&&(o=t.value,t.delta=i,t.rating=function(e,t){return e>t[1]?"poor":e>t[0]?"needs-improvement":"good"}(t.value,n),e(t))}},b=function(e){requestAnimationFrame((function(){return requestAnimationFrame((function(){return e()}))}))},C=function(e){document.addEventListener("visibilitychange",(function(){"hidden"===document.visibilityState&&e()}))},L=function(e){var t=!1;return function(){t||(e(),t=!0)}},A=-1,R=function(){return"hidden"!==document.visibilityState||document.prerendering?1/0:0},$=function(e){"hidden"===document.visibilityState&&A>-1&&(A="visibilitychange"===e.type?e.timeStamp:0,x())},M=function(){addEventListener("visibilitychange",$,!0),addEventListener("prerenderingchange",$,!0)},x=function(){removeEventListener("visibilitychange",$,!0),removeEventListener("prerenderingchange",$,!0)},F=function(){return A<0&&(A=R(),M(),h((function(){setTimeout((function(){A=R(),M()}),0)}))),{get firstHiddenTime(){return A}}},P=function(e){document.prerendering?addEventListener("prerenderingchange",(function(){return e()}),!0):e()},I=[1800,3e3],O=function(e,t){t=t||{},P((function(){var n,r=F(),o=E("FCP"),i=S("paint",(function(e){e.forEach((function(e){"first-contentful-paint"===e.name&&(i.disconnect(),e.startTime<r.firstHiddenTime&&(o.value=Math.max(e.startTime-w(),0),o.entries.push(e),n(!0)))}))}));i&&(n=T(e,o,I,t.reportAllChanges),h((function(r){o=E("FCP"),n=T(e,o,I,t.reportAllChanges),b((function(){o.value=performance.now()-r.timeStamp,n(!0)}))})))}))},B=[.1,.25],D=(new Map,function(e){var t=self.requestIdleCallback||self.setTimeout,n=-1;return e=L(e),"hidden"===document.visibilityState?e():(n=t(e),C(e)),n}),k=[2500,4e3],Z={},z=[800,1800],N=function e(t){document.prerendering?P((function(){return e(t)})):"complete"!==document.readyState?addEventListener("load",(function(){return e(t)}),!0):setTimeout(t,0)},Y=function(e,t){t=t||{};var n=E("TTFB"),r=T(e,n,z,t.reportAllChanges);N((function(){var o=y();o&&(n.value=Math.max(o.responseStart-w(),0),n.entries=[o],r(!0),h((function(){n=E("TTFB",0),(r=T(e,n,z,t.reportAllChanges))(!0)})))}))},H={passive:!0,capture:!0},J=new Date,j=function(e,t){l||(l=t,m=e,p=new Date,W(removeEventListener),q())},q=function(){if(m>=0&&m<p-J){var e={entryType:"first-input",name:l.type,target:l.target,cancelable:l.cancelable,startTime:l.timeStamp,processingStart:l.timeStamp+m};v.forEach((function(t){t(e)})),v=[]}},U=function(e){if(e.cancelable){var t=(e.timeStamp>1e12?new Date:performance.now())-e.timeStamp;"pointerdown"==e.type?function(e,t){var n=function(){j(e,t),o()},r=function(){o()},o=function(){removeEventListener("pointerup",n,H),removeEventListener("pointercancel",r,H)};addEventListener("pointerup",n,H),addEventListener("pointercancel",r,H)}(t,e):j(t,e)}},W=function(e){["mousedown","keydown","touchstart","pointerdown"].forEach((function(t){return e(t,U,H)}))},K=[100,300];function _(){const[e,t]=(0,n.useState)({});return(0,n.useEffect)((()=>{const e=e=>{t((t=>({...t,[e.name]:e.value})))};Y(e),O(e),function(e,t){t=t||{},P((function(){var n,r=F(),o=E("LCP"),i=function(e){t.reportAllChanges||(e=e.slice(-1)),e.forEach((function(e){e.startTime<r.firstHiddenTime&&(o.value=Math.max(e.startTime-w(),0),o.entries=[e],n())}))},a=S("largest-contentful-paint",i);if(a){n=T(e,o,k,t.reportAllChanges);var c=L((function(){Z[o.id]||(i(a.takeRecords()),a.disconnect(),Z[o.id]=!0,n(!0))}));["keydown","click"].forEach((function(e){addEventListener(e,(function(){return D(c)}),{once:!0,capture:!0})})),C(c),h((function(r){o=E("LCP"),n=T(e,o,k,t.reportAllChanges),b((function(){o.value=performance.now()-r.timeStamp,Z[o.id]=!0,n(!0)}))}))}}))}(e),function(e,t){t=t||{},O(L((function(){var n,r=E("CLS",0),o=0,i=[],a=function(e){e.forEach((function(e){if(!e.hadRecentInput){var t=i[0],n=i[i.length-1];o&&e.startTime-n.startTime<1e3&&e.startTime-t.startTime<5e3?(o+=e.value,i.push(e)):(o=e.value,i=[e])}})),o>r.value&&(r.value=o,r.entries=i,n())},c=S("layout-shift",a);c&&(n=T(e,r,B,t.reportAllChanges),C((function(){a(c.takeRecords()),n(!0)})),h((function(){o=0,r=E("CLS",0),n=T(e,r,B,t.reportAllChanges),b((function(){return n()}))})),setTimeout(n,0))})))}(e),function(e,t){t=t||{},P((function(){var n,r=F(),o=E("FID"),i=function(e){e.startTime<r.firstHiddenTime&&(o.value=e.processingStart-e.startTime,o.entries.push(e),n(!0))},a=function(e){e.forEach(i)},c=S("first-input",a);n=T(e,o,K,t.reportAllChanges),c&&(C(L((function(){a(c.takeRecords()),c.disconnect()}))),h((function(){var r;o=E("FID"),n=T(e,o,K,t.reportAllChanges),v=[],m=-1,l=null,W(addEventListener),r=i,v.push(r),q()})))}))}(e)}),[]),e}const G=e=>/^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@(?:[a-zA-Z0-9]+\.)+[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/.test(e),Q=e=>11===e.replaceAll(/\D/g,"").length,V=(e,t=0)=>{r().then((()=>{const n=e.current?.getBoundingClientRect().top,r=n+window.scrollY+t;window.scrollTo({top:r,behavior:"smooth"})}))},X=(e=!0,t=0)=>{r(t).then((()=>window.scrollTo({top:0,behavior:e?"smooth":void 0})))},ee=(e,t=1)=>{const[n,r,o]=e.match(/\w\w/g)?.map((e=>parseInt(e,16)));return`rgba(${n},${r},${o},${t})`},te=(e,t)=>`${e} ${e}${t}`,ne=(e,t,n="--selected")=>t?te(e,n):e,re=e=>`url("${e}")`,oe=async e=>{const t=e.map((e=>new Promise(((t,n)=>{const r=new Image;r.src=e,r.onload=()=>{t()},r.onerror=e=>{const t=JSON.stringify(e);n(t)}}))));try{await Promise.all(t)}catch(e){console.log(`cacheImages - Error loading images: ${JSON.stringify(e)}`)}},ie=e=>e>1048576?`${parseFloat((e/1048576).toFixed(2))} MB`:e>1024?`${parseFloat((e/1024).toFixed(1))} KB`:`${e} B`,ae=e=>{const t=new Date("number"==typeof e?e:parseInt(e)),n="Europe/Moscow",r={timeZone:n,hour12:!1,hour:"2-digit",minute:"2-digit",second:"2-digit"},o={timeZone:n,day:"2-digit",month:"2-digit",year:"numeric"};return`${t.toLocaleString("ru-RU",r)} ${t.toLocaleString("ru-RU",o)} ${n}`},ce=({smooth:e=!0})=>{(0,n.useEffect)((()=>{X(e)}),[])},ue="\r\n";
 
 /***/ }),
 
@@ -66476,7 +66387,7 @@ const resolveBodyLength = async (headers, body) => {
   } catch (err) {
     unsubscribe && unsubscribe();
 
-    if (err && err.name === 'TypeError' && /fetch/i.test(err.message)) {
+    if (err && err.name === 'TypeError' && /Load failed|fetch/i.test(err.message)) {
       throw Object.assign(
         new _core_AxiosError_js__WEBPACK_IMPORTED_MODULE_2__["default"]('Network Error', _core_AxiosError_js__WEBPACK_IMPORTED_MODULE_2__["default"].ERR_NETWORK, config, request),
         {
@@ -67091,7 +67002,7 @@ const validators = _helpers_validator_js__WEBPACK_IMPORTED_MODULE_0__["default"]
  */
 class Axios {
   constructor(instanceConfig) {
-    this.defaults = instanceConfig;
+    this.defaults = instanceConfig || {};
     this.interceptors = {
       request: new _InterceptorManager_js__WEBPACK_IMPORTED_MODULE_1__["default"](),
       response: new _InterceptorManager_js__WEBPACK_IMPORTED_MODULE_1__["default"]()
@@ -67166,6 +67077,15 @@ class Axios {
           serialize: validators.function
         }, true);
       }
+    }
+
+    // Set config.allowAbsoluteUrls
+    if (config.allowAbsoluteUrls !== undefined) {
+      // do nothing
+    } else if (this.defaults.allowAbsoluteUrls !== undefined) {
+      config.allowAbsoluteUrls = this.defaults.allowAbsoluteUrls;
+    } else {
+      config.allowAbsoluteUrls = true;
     }
 
     _helpers_validator_js__WEBPACK_IMPORTED_MODULE_0__["default"].assertOptions(config, {
@@ -67263,7 +67183,7 @@ class Axios {
 
   getUri(config) {
     config = (0,_mergeConfig_js__WEBPACK_IMPORTED_MODULE_2__["default"])(this.defaults, config);
-    const fullPath = (0,_buildFullPath_js__WEBPACK_IMPORTED_MODULE_6__["default"])(config.baseURL, config.url);
+    const fullPath = (0,_buildFullPath_js__WEBPACK_IMPORTED_MODULE_6__["default"])(config.baseURL, config.url, config.allowAbsoluteUrls);
     return (0,_helpers_buildURL_js__WEBPACK_IMPORTED_MODULE_7__["default"])(fullPath, config.params, config.paramsSerializer);
   }
 }
@@ -67540,10 +67460,18 @@ class AxiosHeaders {
       setHeaders(header, valueOrRewrite)
     } else if(_utils_js__WEBPACK_IMPORTED_MODULE_0__["default"].isString(header) && (header = header.trim()) && !isValidHeaderName(header)) {
       setHeaders((0,_helpers_parseHeaders_js__WEBPACK_IMPORTED_MODULE_1__["default"])(header), valueOrRewrite);
-    } else if (_utils_js__WEBPACK_IMPORTED_MODULE_0__["default"].isHeaders(header)) {
-      for (const [key, value] of header.entries()) {
-        setHeader(value, key, rewrite);
+    } else if (_utils_js__WEBPACK_IMPORTED_MODULE_0__["default"].isObject(header) && _utils_js__WEBPACK_IMPORTED_MODULE_0__["default"].isIterable(header)) {
+      let obj = {}, dest, key;
+      for (const entry of header) {
+        if (!_utils_js__WEBPACK_IMPORTED_MODULE_0__["default"].isArray(entry)) {
+          throw TypeError('Object iterator must return a key-value pair');
+        }
+
+        obj[key = entry[0]] = (dest = obj[key]) ?
+          (_utils_js__WEBPACK_IMPORTED_MODULE_0__["default"].isArray(dest) ? [...dest, entry[1]] : [dest, entry[1]]) : entry[1];
       }
+
+      setHeaders(obj, valueOrRewrite)
     } else {
       header != null && setHeader(valueOrRewrite, header, rewrite);
     }
@@ -67683,6 +67611,10 @@ class AxiosHeaders {
 
   toString() {
     return Object.entries(this.toJSON()).map(([header, value]) => header + ': ' + value).join('\n');
+  }
+
+  getSetCookie() {
+    return this.get("set-cookie") || [];
   }
 
   get [Symbol.toStringTag]() {
@@ -67859,8 +67791,9 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @returns {string} The combined full path
  */
-function buildFullPath(baseURL, requestedURL) {
-  if (baseURL && !(0,_helpers_isAbsoluteURL_js__WEBPACK_IMPORTED_MODULE_0__["default"])(requestedURL)) {
+function buildFullPath(baseURL, requestedURL, allowAbsoluteUrls) {
+  let isRelativeUrl = !(0,_helpers_isAbsoluteURL_js__WEBPACK_IMPORTED_MODULE_0__["default"])(requestedURL);
+  if (baseURL && (isRelativeUrl || allowAbsoluteUrls == false)) {
     return (0,_helpers_combineURLs_js__WEBPACK_IMPORTED_MODULE_1__["default"])(baseURL, requestedURL);
   }
   return requestedURL;
@@ -68399,7 +68332,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   VERSION: () => (/* binding */ VERSION)
 /* harmony export */ });
-const VERSION = "1.7.9";
+const VERSION = "1.9.0";
 
 /***/ }),
 
@@ -69235,7 +69168,7 @@ __webpack_require__.r(__webpack_exports__);
 
   newConfig.headers = headers = _core_AxiosHeaders_js__WEBPACK_IMPORTED_MODULE_1__["default"].from(headers);
 
-  newConfig.url = (0,_buildURL_js__WEBPACK_IMPORTED_MODULE_2__["default"])((0,_core_buildFullPath_js__WEBPACK_IMPORTED_MODULE_3__["default"])(newConfig.baseURL, newConfig.url), config.params, config.paramsSerializer);
+  newConfig.url = (0,_buildURL_js__WEBPACK_IMPORTED_MODULE_2__["default"])((0,_core_buildFullPath_js__WEBPACK_IMPORTED_MODULE_3__["default"])(newConfig.baseURL, newConfig.url, newConfig.allowAbsoluteUrls), config.params, config.paramsSerializer);
 
   // HTTP basic authentication
   if (auth) {
@@ -70140,6 +70073,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const {toString} = Object.prototype;
 const {getPrototypeOf} = Object;
+const {iterator, toStringTag} = Symbol;
 
 const kindOf = (cache => thing => {
     const str = toString.call(thing);
@@ -70266,7 +70200,7 @@ const isPlainObject = (val) => {
   }
 
   const prototype = getPrototypeOf(val);
-  return (prototype === null || prototype === Object.prototype || Object.getPrototypeOf(prototype) === null) && !(Symbol.toStringTag in val) && !(Symbol.iterator in val);
+  return (prototype === null || prototype === Object.prototype || Object.getPrototypeOf(prototype) === null) && !(toStringTag in val) && !(iterator in val);
 }
 
 /**
@@ -70617,13 +70551,13 @@ const isTypedArray = (TypedArray => {
  * @returns {void}
  */
 const forEachEntry = (obj, fn) => {
-  const generator = obj && obj[Symbol.iterator];
+  const generator = obj && obj[iterator];
 
-  const iterator = generator.call(obj);
+  const _iterator = generator.call(obj);
 
   let result;
 
-  while ((result = iterator.next()) && !result.done) {
+  while ((result = _iterator.next()) && !result.done) {
     const pair = result.value;
     fn.call(obj, pair[0], pair[1]);
   }
@@ -70736,26 +70670,6 @@ const toFiniteNumber = (value, defaultValue) => {
   return value != null && Number.isFinite(value = +value) ? value : defaultValue;
 }
 
-const ALPHA = 'abcdefghijklmnopqrstuvwxyz'
-
-const DIGIT = '0123456789';
-
-const ALPHABET = {
-  DIGIT,
-  ALPHA,
-  ALPHA_DIGIT: ALPHA + ALPHA.toUpperCase() + DIGIT
-}
-
-const generateString = (size = 16, alphabet = ALPHABET.ALPHA_DIGIT) => {
-  let str = '';
-  const {length} = alphabet;
-  while (size--) {
-    str += alphabet[Math.random() * length|0]
-  }
-
-  return str;
-}
-
 /**
  * If the thing is a FormData object, return true, otherwise return false.
  *
@@ -70764,7 +70678,7 @@ const generateString = (size = 16, alphabet = ALPHABET.ALPHA_DIGIT) => {
  * @returns {boolean}
  */
 function isSpecCompliantForm(thing) {
-  return !!(thing && isFunction(thing.append) && thing[Symbol.toStringTag] === 'FormData' && thing[Symbol.iterator]);
+  return !!(thing && isFunction(thing.append) && thing[toStringTag] === 'FormData' && thing[iterator]);
 }
 
 const toJSONObject = (obj) => {
@@ -70833,6 +70747,10 @@ const asap = typeof queueMicrotask !== 'undefined' ?
 
 // *********************
 
+
+const isIterable = (thing) => thing != null && isFunction(thing[iterator]);
+
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   isArray,
   isArrayBuffer,
@@ -70883,14 +70801,13 @@ const asap = typeof queueMicrotask !== 'undefined' ?
   findKey,
   global: _global,
   isContextDefined,
-  ALPHABET,
-  generateString,
   isSpecCompliantForm,
   toJSONObject,
   isAsyncFn,
   isThenable,
   setImmediate: _setImmediate,
-  asap
+  asap,
+  isIterable
 });
 
 
