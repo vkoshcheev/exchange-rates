@@ -5819,8 +5819,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
   font-family: Twemoji Country Flags, Consolas, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F5EFE7;
   color: #213555;
+  background-color: #fff9f2;
+  background-image: radial-gradient(#D8C4B6 0.5px, #fff9f2 0.5px);
+  background-size: 4px 4px;
 }
 
 p {
@@ -5842,7 +5844,7 @@ button {
   border: 0;
   -webkit-tap-highlight-color: transparent;
   font-family: unset !important;
-}`, "",{"version":3,"sources":["webpack://./src/index.scss","webpack://./src/utils/_themeConstants.scss"],"names":[],"mappings":"AAEA;EACE,aAAA;EACA,sBAAA;EAEA,SAAA;EACA,UAAA;EAEA,qBAAA;EACA,+LAAA;EAGA,mCAAA;EACA,kCAAA;EAEA,yBCRa;EDSb,cCjBW;ADWb;;AASA;EACE,SAAA;AANF;;AASA;EACE,wCAAA;AANF;;AASA;EACE,eAAA;EACA,qBAAA;EACA,gBAAA;EACA,YAAA;EACA,iBAAA;EACA,UAAA;EACA,SAAA;EACA,SAAA;EACA,wCAAA;EACA,6BAAA;AANF","sourcesContent":["@use \"./utils/themeConstants\";\r\n\r\nbody {\r\n  display: flex;\r\n  flex-direction: column;\r\n\r\n  margin: 0;\r\n  padding: 0;\r\n\r\n  white-space: pre-line;\r\n  font-family: Twemoji Country Flags, Consolas, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\r\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\r\n    sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n\r\n  background-color: themeConstants.$color-bright;\r\n  color: themeConstants.$color-dark;\r\n}\r\n\r\np {\r\n  margin: 0;\r\n}\r\n\r\na {\r\n  -webkit-tap-highlight-color: transparent;\r\n}\r\n\r\nbutton {\r\n  cursor: pointer;\r\n  text-decoration: none;\r\n  background: none;\r\n  border: none;\r\n  user-select: none;\r\n  padding: 0;\r\n  margin: 0;\r\n  border: 0;\r\n  -webkit-tap-highlight-color: transparent;\r\n  font-family: unset !important;\r\n}","$color-dark: #213555;\r\n$color-dark-highlight: #3E5879;\r\n\r\n$color-medium: #D8C4B6;\r\n\r\n$color-light: #ebd9cd;\r\n$color-light1: #f1e2d7;\r\n\r\n$color-bright: #F5EFE7;\r\n$color-brightest: #fff9f2;\r\n\r\n$mobile-cutoff-width: 720px;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/index.scss","webpack://./src/utils/_themeConstants.scss"],"names":[],"mappings":"AAEA;EACE,aAAA;EACA,sBAAA;EAEA,SAAA;EACA,UAAA;EAEA,qBAAA;EACA,+LAAA;EAGA,mCAAA;EACA,kCAAA;EAEA,cChBW;EDkBX,yBCTgB;EDUhB,+DAAA;EACA,wBAAA;AAPF;;AAUA;EACE,SAAA;AAPF;;AAUA;EACE,wCAAA;AAPF;;AAUA;EACE,eAAA;EACA,qBAAA;EACA,gBAAA;EACA,YAAA;EACA,iBAAA;EACA,UAAA;EACA,SAAA;EACA,SAAA;EACA,wCAAA;EACA,6BAAA;AAPF","sourcesContent":["@use \"./utils/themeConstants\";\r\n\r\nbody {\r\n  display: flex;\r\n  flex-direction: column;\r\n\r\n  margin: 0;\r\n  padding: 0;\r\n\r\n  white-space: pre-line;\r\n  font-family: Twemoji Country Flags, Consolas, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\r\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\r\n    sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n\r\n  color: themeConstants.$color-dark;\r\n\r\n  background-color: themeConstants.$color-brightest;\r\n  background-image: radial-gradient(themeConstants.$color-medium 0.5px, themeConstants.$color-brightest 0.5px);\r\n  background-size: 4px 4px;\r\n}\r\n\r\np {\r\n  margin: 0;\r\n}\r\n\r\na {\r\n  -webkit-tap-highlight-color: transparent;\r\n}\r\n\r\nbutton {\r\n  cursor: pointer;\r\n  text-decoration: none;\r\n  background: none;\r\n  border: none;\r\n  user-select: none;\r\n  padding: 0;\r\n  margin: 0;\r\n  border: 0;\r\n  -webkit-tap-highlight-color: transparent;\r\n  font-family: unset !important;\r\n}","$color-dark: #213555;\r\n$color-dark-highlight: #3E5879;\r\n\r\n$color-medium: #D8C4B6;\r\n\r\n$color-light: #ebd9cd;\r\n$color-light1: #f1e2d7;\r\n\r\n$color-bright: #F5EFE7;\r\n$color-brightest: #fff9f2;\r\n\r\n$mobile-cutoff-width: 720px;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
