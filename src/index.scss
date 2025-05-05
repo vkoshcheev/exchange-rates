@@ -14,8 +14,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: themeConstants.$color-bright;
   color: themeConstants.$color-dark;
+
+  background-color: themeConstants.$color-brightest;
+  background-image: radial-gradient(themeConstants.$color-medium 0.5px, themeConstants.$color-brightest 0.5px);
+  background-size: 4px 4px;
 }
 
 p {
