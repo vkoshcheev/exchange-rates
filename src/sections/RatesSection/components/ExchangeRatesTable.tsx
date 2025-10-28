@@ -22,9 +22,9 @@ import { restrictToParentElement, restrictToWindowEdges } from '@dnd-kit/modifie
 import { SortableContext, arrayMove, rectSortingStrategy } from '@dnd-kit/sortable';
 import { useMemo } from 'react';
 import { useDispatch } from 'react-redux';
+import { useLocalStorage } from 'utils-react';
 import { setCurrenciesOrderedList } from '../../../redux/mainReducer';
 import { useAppSelector } from '../../../redux/store';
-import { useLocalStorage } from 'utils-library';
 import localStorageKeys from '../../../utils/localStorageKeys';
 import ExchangeRatesTableHeaders from './ExchangeRatesTableHeaders';
 

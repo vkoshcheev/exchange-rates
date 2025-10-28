@@ -2,7 +2,7 @@ import { useDroppable } from '@dnd-kit/core';
 import { useSortable } from '@dnd-kit/sortable';
 import { isNumber } from 'lodash';
 import React from 'react';
-import { addModifierToClassWhenConditionIsTrue } from 'utils-library';
+import { addModifierToClassWhenConditionIsTrue } from 'utils-react';
 import AppSpinner from '../../../components/AppSpinner/AppSpinner';
 import { useAppSelector } from '../../../redux/store';
 import { CurrencyIso, InstrumentIso, cisCurrenciesData, instrumentsData } from '../../../utils/requests/currenciesList';

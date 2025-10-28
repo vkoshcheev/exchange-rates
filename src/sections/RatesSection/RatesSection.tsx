@@ -1,13 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
 import { useEffect, useMemo, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useLocalStorage } from 'utils-react';
 import AppSelectorMenu from '../../components/AppSelectorMenu/AppSelectorMenu';
 import AppSpinner from '../../components/AppSpinner/AppSpinner';
 import AppSwitchButton from '../../components/AppSwitchButton/AppSwitchButton';
 import { setDraggingRowsEnabled, setPeriodicExchangeRatesData } from '../../redux/mainReducer';
 import { useAppSelector } from '../../redux/store';
 import { addFlagsFormatting } from '../../utils/addFlagsFormatting';
-import { useLocalStorage } from 'utils-library';
 import localStorageKeys from '../../utils/localStorageKeys';
 import {
   CurrencyIso,

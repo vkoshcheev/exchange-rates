@@ -1,4 +1,4 @@
-import { addModifierToClassWhenConditionIsTrue, useCloseModalOnClickOutside } from 'utils-library';
+import { addModifierToClassWhenConditionIsTrue, useCloseModalOnClickOutside } from 'utils-react';
 import './AppMenuModal.scss';
 import { AppMenuItem } from './AppSelectorMenu';
 
